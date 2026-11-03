@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ritu | BSc Forensic Science Student</title>
+<meta name="description" content="Academic website of Ritu, BSc (Honors) Forensic Science student at Lovely Professional University.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F6F8; --surface:#FFFFFF; --ink:#16202A; --muted:#55636F;
+  --uv:#5B3FD9; --lumi:#18A0C4; --tag:#F2C230; --line:#D5DEE4;
+  --head:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0E141A; --surface:#161F27; --ink:#EAF0F4; --muted:#9AA9B5; --uv:#9C88FF; --lumi:#4CC9E8; --line:#26323C;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body)}
+a{color:var(--uv)}
+:focus-visible{outline:3px solid var(--lumi);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--head);line-height:1.1;margin:0}
+h2{font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:700;margin-bottom:28px}
+h3{font-size:1.2rem;font-weight:700}
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:6px 22px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}
+nav strong{font-family:var(--head);font-size:1.15rem}
+nav ul{display:flex;gap:4px 18px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav a{color:var(--ink);text-decoration:none;font-size:.95rem}
+nav a:hover{color:var(--uv)}
+
+/* Hero */
+.hero{padding:72px 0 64px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:800;letter-spacing:-.02em}
+.hero p.lead{font-size:1.2rem;color:var(--muted);max-width:34em;margin:18px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:500;text-decoration:none;border:2px solid var(--uv)}
+.btn.primary{background:var(--uv);color:#fff}
+.btn.ghost{color:var(--uv)}
+.btn:hover{filter:brightness(1.1)}
+.print{position:relative;aspect-ratio:1;max-width:380px;justify-self:center;width:100%;overflow:hidden;border-radius:50% / 46%}
+.print svg{width:100%;height:100%;display:block}
+.print path{fill:none;stroke:var(--ink);stroke-width:3.2;stroke-linecap:round;opacity:.85}
+.scan{position:absolute;left:0;right:0;height:22%;top:-25%;background:linear-gradient(180deg,transparent,color-mix(in srgb,var(--uv) 45%,transparent),transparent);animation:scan 2.6s ease-in-out 1 forwards .4s}
+@keyframes scan{to{top:105%}}
+@media (prefers-reduced-motion:reduce){.scan{display:none}html{scroll-behavior:auto}}
+
+section{padding:56px 0;border-top:1px solid var(--line)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.about p{max-width:38em;margin:0 0 14px}
+
+/* Timeline (education is a real sequence) */
+.timeline{list-style:none;margin:0;padding:0 0 0 26px;border-left:3px solid var(--lumi)}
+.timeline li{position:relative;padding:0 0 30px 0}
+.timeline li::before{content:"";position:absolute;left:-36px;top:7px;width:15px;height:15px;border-radius:50%;background:var(--bg);border:3px solid var(--uv)}
+.when{display:inline-block;background:var(--tag);color:#16202A;font-weight:500;font-size:.85rem;padding:2px 10px;border-radius:4px;margin-bottom:6px}
+.timeline p{margin:4px 0 0;color:var(--muted)}
+.score{font-family:var(--head);font-weight:700;color:var(--ink)}
+
+.chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0;padding:0}
+.chips li{background:var(--surface);border:1px solid var(--line);padding:8px 16px;border-radius:999px}
+.goal{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--uv);padding:24px 28px;border-radius:8px}
+.goal p{margin:8px 0 0;color:var(--muted)}
+
+.contact dl{display:grid;grid-template-columns:max-content 1fr;gap:10px 24px;margin:0}
+.contact dt{color:var(--muted)}
+.contact dd{margin:0;overflow-wrap:anywhere}
+footer{padding:32px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+
+@media (max-width:760px){
+  .hero .wrap,.two{grid-template-columns:1fr}
+  .print{max-width:260px;order:-1}
+  .hero{padding-top:40px}
+}
+</style>
+</head>
+<body>
+
+<!--
+  ╔══════════════════════════════════════════════════════════════╗
+  ║  HOW TO EDIT: change the text inside the SITE block in the   ║
+  ║  <script> at the bottom of this file. Nothing else needs     ║
+  ║  to change. Save, commit, and GitHub Pages updates itself.   ║
+  ╚══════════════════════════════════════════════════════════════╝
+-->
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <strong id="navName">Ritu</strong>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#goals">Goals</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <h1 id="heroName">Ritu</h1>
+      <p class="lead" id="heroLead"></p>
+      <div class="btns">
+        <a class="btn primary" id="btnLinkedIn" href="#" target="_blank" rel="noopener">View my LinkedIn</a>
+        <a class="btn ghost" href="#contact">Contact me</a>
+      </div>
+    </div>
+    <div class="print" aria-hidden="true">
+      <svg viewBox="-200 -210 400 420" id="fp"></svg>
+      <div class="scan"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="about" class="about">
+    <div class="wrap two">
+      <div><h2>About me</h2></div>
+      <div id="aboutText"></div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <h2>Education</h2>
+      <ol class="timeline" id="eduList"></ol>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap two">
+      <div>
+        <h2>Skills</h2>
+        <ul class="chips" id="skillList"></ul>
+      </div>
+      <div>
+        <h2>Interests</h2>
+        <ul class="chips" id="interestList"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="goals">
+    <div class="wrap">
+      <h2>Goals</h2>
+      <div class="goal">
+        <h3 id="goalTitle"></h3>
+        <p id="goalText"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap two">
+      <div><h2>Get in touch</h2><p style="color:var(--muted);max-width:26em">Happy to connect about academics, internships, or study groups.</p></div>
+      <dl id="contactList"></dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span id="footerText"></span></div>
+</footer>
+
+<script>
+/* =====================================================
+   EDIT YOUR CONTENT HERE. Keep the quotes and commas.
+   ===================================================== */
+const SITE = {
+  name: "Ritu",
+  headline: "BSc (Honors) Forensic Science student at Lovely Professional University, preparing for a career in government service.",
+
+  about: [
+    "I am a first-year BSc (Honors) Forensic Science student. I enjoy learning how evidence is collected, examined, and explained, and I pick up new concepts quickly.",
+    "I work well in teams, communicate clearly, and stay open to feedback. I am preparing for SSC CGL alongside my degree."
+  ],
+
+  education: [
+    { years: "2026 – 2030", title: "BSc (Honors) Forensic Science",
+      place: "Lovely Professional University", score: "" }
+  ],
+
+  skills: [
+    "Good communication", "Quick learner", "Adaptable",
+    "Teamwork", "Positive attitude", "Willingness to learn"
+  ],
+
+  interests: ["Reading", "Travelling", "Exploring new places"],
+
+  goal: {
+    title: "Government job through SSC CGL",
+    text: "I am building a strong base in my degree while preparing for the SSC Combined Graduate Level exam."
+  },
+
+  contact: {
+    email: "ritupanghal264@gmail.com",
+    phone: "9518144265",
+    showPhone: true,            // set to false to hide your phone number on the public site
+    location: "Rohtak, Haryana, India",
+    linkedin: "https://www.linkedin.com/in/ritu-panghal-818617426",
+    github: ""                  // optional: add your GitHub profile link, e.g. "https://github.com/yourname"
+  },
+
+  languages: "English, Hindi",
+  footer: "© 2026 Ritu. Built with HTML and hosted on GitHub Pages."
+};
+/* ===================== END OF EDIT AREA ===================== */
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const C = SITE.contact;
+
+document.title = SITE.name + " | BSc Forensic Science Student";
+$("navName").textContent = SITE.name;
+$("heroName").textContent = SITE.name;
+$("heroLead").textContent = SITE.headline;
+$("btnLinkedIn").href = C.linkedin;
+$("aboutText").innerHTML = SITE.about.map(p => "<p>" + esc(p) + "</p>").join("");
+
+$("eduList").innerHTML = SITE.education.map(e =>
+  '<li><span class="when">' + esc(e.years) + '</span><h3>' + esc(e.title) + '</h3><p>' + esc(e.place) +
+  (e.score ? ' · <span class="score">' + esc(e.score) + '</span>' : '') + '</p></li>').join("");
+
+$("skillList").innerHTML = SITE.skills.map(s => "<li>" + esc(s) + "</li>").join("");
+$("interestList").innerHTML = SITE.interests.map(s => "<li>" + esc(s) + "</li>").join("");
+$("goalTitle").textContent = SITE.goal.title;
+$("goalText").textContent = SITE.goal.text;
+
+const rows = [
+  ["Email", '<a href="mailto:' + esc(C.email) + '">' + esc(C.email) + '</a>'],
+  C.showPhone ? ["Phone", '<a href="tel:+91' + esc(C.phone) + '">' + esc(C.phone) + '</a>'] : null,
+  ["LinkedIn", '<a href="' + esc(C.linkedin) + '" target="_blank" rel="noopener">View profile</a>'],
+  C.github ? ["GitHub", '<a href="' + esc(C.github) + '" target="_blank" rel="noopener">View profile</a>'] : null,
+  ["Location", esc(C.location)],
+  ["Languages", esc(SITE.languages)]
+].filter(Boolean);
+$("contactList").innerHTML = rows.map(r => "<dt>" + r[0] + "</dt><dd>" + r[1] + "</dd>").join("");
+$("footerText").textContent = SITE.footer;
+
+/* Fingerprint drawing: concentric ridges with small gaps */
+(function(){
+  const svg = $("fp"); let d = "";
+  for (let i = 0; i < 24; i++) {
+    const rx = 14 + i * 7.6, ry = 18 + i * 8.2;
+    const start = (i * 37) % 360, gap = 18 + (i % 5) * 9;
+    const a0 = (start * Math.PI) / 180, a1 = ((start + 360 - gap) * Math.PI) / 180;
+    const x0 = rx * Math.cos(a0), y0 = ry * Math.sin(a0) + (i % 2 ? 6 : -6);
+    const x1 = rx * Math.cos(a1), y1 = ry * Math.sin(a1) + (i % 2 ? 6 : -6);
+    d += '<path d="M' + x0.toFixed(1) + ' ' + y0.toFixed(1) + ' A' + rx.toFixed(1) + ' ' + ry.toFixed(1) +
+         ' 0 1 1 ' + x1.toFixed(1) + ' ' + y1.toFixed(1) + '"/>';
+  }
+  svg.innerHTML = d;
+})();
+</script>
+<noscript><p style="padding:24px">Please enable JavaScript to view this page.</p></noscript>
+</body>
+</html>
